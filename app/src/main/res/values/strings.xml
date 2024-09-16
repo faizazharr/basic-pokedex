@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+
+    <string name="pokemon_name">Nama Pokemon</string>
+    <string name="description">Deskripsi</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="about">About</string>
+    <string name="search">Pencarian</string>
+
+    <string-array name="data_code">
+        <item>0001</item>
+        <item>0002</item>
+        <item>0003</item>
+        <item>0004</item>
+        <item>0005</item>
+        <item>0006</item>
+        <item>0007</item>
+        <item>0008</item>
+        <item>0009</item>
+        <item>0010</item>
+    </string-array>
+
+    <string-array name="data_name">
+        <item>Bulbasaur</item>
+        <item>Ivysaur</item>
+        <item>Venusaur</item>
+        <item>Charmander</item>
+        <item>Charmeleon</item>
+        <item>Charizard</item>
+        <item>Squirtle</item>
+        <item>Wartortle</item>
+        <item>Blastoise</item>
+        <item>Caterpie</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</item>
+        <item>When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.</item>
+        <item>Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.</item>
+        <item>It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.</item>
+        <item>It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.</item>
+        <item>It is said that Charizard’s fire burns hotter if it has experienced harsh battles.</item>
+        <item>When it retracts its long neck into its shell, it squirts out water with vigorous force.</item>
+        <item>It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.</item>
+        <item>It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.</item>
+        <item>For protection, it releases a horrible stench from the antenna on its head to drive away enemies.</item>
+    </string-array>
+
+    <string-array name="data_height">
+        <item>2\' 04\"</item>
+        <item>3\' 03\"</item>
+        <item>6\' 07\"</item>
+        <item>2\' 00\"</item>
+        <item>3\' 07\"</item>
+        <item>5\' 07\"</item>
+        <item>1\' 08\"</item>
+        <item>3\' 03\"</item>
+        <item>5\' 03\"</item>
+        <item>1\' 00\"</item>
+    </string-array>
+    <string-array name="data_weight">
+        <item>15.2 lbs</item>
+        <item>28.7 lbs</item>
+        <item>220.5 lbs</item>
+        <item>18.7 lbs</item>
+        <item>41.9 lbs</item>
+        <item>199.5 lbs</item>
+        <item>19.8 lbs</item>
+        <item>49.6 lbs</item>
+        <item>188.5 lbs</item>
+        <item>6.4 lbs</item>
+    </string-array>
+    <string-array name="data_category">
+        <item>Seed</item>
+        <item>Seed</item>
+        <item>Seed</item>
+        <item>Lizard</item>
+        <item>Flame</item>
+        <item>Flame</item>
+        <item>Tiny Turtle</item>
+        <item>Turtle</item>
+        <item>Shellfish</item>
+        <item>Worm</item>
+    </string-array>
+    <string-array name="data_abilities">
+        <item>Overgrow</item>
+        <item>Overgrow</item>
+        <item>Overgrow</item>
+        <item>Blaze</item>
+        <item>Blaze</item>
+        <item>Blaze</item>
+        <item>Torrent</item>
+        <item>Torrent</item>
+        <item>Torrent</item>
+        <item>Shield Dust</item>
+    </string-array>
+    <string-array name="data_type">
+        <item>Grass, Poison</item>
+        <item>Grass, Poison</item>
+        <item>Grass, Poison</item>
+        <item>Fire</item>
+        <item>Fire</item>
+        <item>Fire, Flying</item>
+        <item>Water</item>
+        <item>Water</item>
+        <item>Water</item>
+        <item>Bug</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/p_01</item>
+        <item>@drawable/p_02</item>
+        <item>@drawable/p_03</item>
+        <item>@drawable/p_04</item>
+        <item>@drawable/p_05</item>
+        <item>@drawable/p_06</item>
+        <item>@drawable/p_07</item>
+        <item>@drawable/p_08</item>
+        <item>@drawable/p_09</item>
+        <item>@drawable/p_10</item>
+    </integer-array>
+</resources>
