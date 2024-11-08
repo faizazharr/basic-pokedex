@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.Pokedex" parent="Base.Theme.Pokedex" />
+
+    <style name="CircularImageViewStyle">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
