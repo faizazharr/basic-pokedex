@@ -1,5 +1,6 @@
 package com.basic.pokedex
 
+import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -10,7 +11,6 @@ import com.basic.pokedex.databinding.ActivityPokemonDetailBinding
 
 class PokemonDetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityPokemonDetailBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,11 +26,25 @@ class PokemonDetailActivity : AppCompatActivity() {
     }
 
     private fun setDataPokemon() {
-        val dataPokemon = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val pokemon = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getParcelableExtra("key_pokemon", Pokemon::class.java)
         } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra<Pokemon>("key_pokemon")
+        }
+        binding.apply {
+            if (pokemon != null) {
+                ivPokemon.setImageResource(pokemon.photo)
+                tvPokemonNumber.text = getString(R.string.format_pokemon_code, pokemon.code)
+                tvPokemonName.text = pokemon.name
+                tvDescription.text = pokemon.desc
+                tvWeight.text = pokemon.weight
+                tvHeight.text = pokemon.height
+                tvCategory.text = pokemon.category
+                tvAbilities.text = pokemon.abilities
+                tvType.text = pokemon.type
+                clTopPokemon.backgroundTintList = ColorStateList.valueOf(pokemon.color)
+            }
         }
     }
 }

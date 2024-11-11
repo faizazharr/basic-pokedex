@@ -7,13 +7,21 @@
     <string name="grid">Grid</string>
     <string name="about">About</string>
     <string name="search">Pencarian</string>
-    <string name="desc_profile_image">this is profile image</string>
-    <string name="desc_icon_back">icon back</string>
     <string name="title_author">Faiz Azhar Ristya Nugraha</string>
     <string name="title_email">faizazharr@gmail.com</string>
+    <string name="title_weight">Weight</string>
+    <string name="title_height">Height</string>
+    <string name="title_category">Category</string>
+    <string name="title_abilities">Abillities</string>
+    <string name="title_type">Type</string>
+    <string name="title_pokedex">Pokedex</string>
     <string name="title_profile_app">Pokedex App</string>
     <string name="desc_ic_share">icon Share</string>
+    <string name="desc_profile_image">this is profile image</string>
+    <string name="desc_icon_back">icon back</string>
     <string name="desc_pokemon_image_preview">Pokemon Image Preview</string>
+
+    <string name="format_pokemon_code">#%1$s</string>
 
     <string-array name="data_code">
         <item>0001</item>
@@ -40,6 +48,19 @@
         <item>Blastoise</item>
         <item>Caterpie</item>
     </string-array>
+
+    <integer-array name="data_color">
+        <item>@color/green</item>
+        <item>@color/green</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/blue</item>
+        <item>@color/blue</item>
+        <item>@color/blue</item>
+        <item>@color/grass</item>
+    </integer-array>
 
     <string-array name="data_description">
         <item>There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</item>

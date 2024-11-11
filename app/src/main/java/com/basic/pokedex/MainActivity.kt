@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val list = ArrayList<Pokemon>()
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,6 +32,11 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(getListPokemon())
         showRecyclerList()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.action_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -52,14 +59,9 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.action_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
     fun getListPokemon(): ArrayList<Pokemon> {
         val code = resources.getStringArray(R.array.data_code)
-        val photo = resources.getIntArray(R.array.data_photo)
+        val photo = resources.obtainTypedArray(R.array.data_photo)
         val name = resources.getStringArray(R.array.data_name)
         val desc = resources.getStringArray(R.array.data_description)
         val height = resources.getStringArray(R.array.data_height)
@@ -67,18 +69,22 @@ class MainActivity : AppCompatActivity() {
         val category = resources.getStringArray(R.array.data_category)
         val abilities = resources.getStringArray(R.array.data_abilities)
         val type = resources.getStringArray(R.array.data_type)
+        val color = resources.getIntArray(R.array.data_color)
         val listPokemon = ArrayList<Pokemon>()
         for (i in name.indices) {
+            val photoResourceId = photo.getResourceId(i, -1)
+
             val pokemon = Pokemon(
                 code = code[i],
-                photo = photo[i],
+                photo = photoResourceId,
                 name = name[i],
                 desc = desc[i],
                 height = height[i],
                 weight = weight[i],
                 category = category[i],
                 abilities = abilities[i],
-                type = type[i]
+                type = type[i],
+                color = color[i]
             )
             listPokemon.add(pokemon)
         }
@@ -94,6 +100,7 @@ class MainActivity : AppCompatActivity() {
                 LinearLayoutManager(this)
             }
         binding.apply {
+            rvPokemon.setHasFixedSize(true)
             rvPokemon.layoutManager = showLayout
             val listPokemonAdapter = PokemonAdapter(list)
             rvPokemon.adapter = listPokemonAdapter
